@@ -11,7 +11,7 @@ If you are not familiar with the different technologies used in this project, pl
 - [Next.js](https://nextjs.org)
 - [NextAuth.js](https://next-auth.js.org)
 - [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
+- [ChakraUI](https://chakra-ui.com)
 - [tRPC](https://trpc.io)
 
 ## Learn More
