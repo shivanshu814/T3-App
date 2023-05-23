@@ -2,7 +2,7 @@
 
 import { type NextPage } from 'next';
 import Head from 'next/head';
-import { Box, Heading } from '@chakra-ui/react';
+import { Box, Heading, Text, Button } from '@chakra-ui/react';
 // `@chakra-ui/theme` is a part of the base install with `@chakra-ui/react`
 import chakraTheme from '@chakra-ui/theme';
 
@@ -15,11 +15,47 @@ const Home: NextPage = () => {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<Box w='100%' h='200px' bgGradient='linear(to-r, green.200, pink.500)'>
-				<Heading as='h2' size='3xl' noOfLines={1}>
-					Bhujal <span>Sarvekshan</span> Kendra
-				</Heading>
+			<Box
+				w='100%'
+				h='200px'
+				bgGradient={[
+					'linear(to-tr, teal.300, yellow.400)',
+					'linear(to-t, blue.200, teal.500)',
+					'linear(to-b, orange.100, purple.300)',
+				]}>
+				<center>
+					<br />
+					<Text
+						bgGradient='linear(to-l, #7928CA, #FF0080)'
+						bgClip='text'
+						fontSize='4xl'
+						fontWeight='extrabold'>
+						मध्य प्रदेश शासन
+					</Text>
+					<Text
+						bgGradient='linear(to-l, #7928CA, #FF0080)'
+						bgClip='text'
+						fontSize='5xl'
+						fontWeight='extrabold'>
+						भूजल सर्वेक्षण आणि विकास यंत्रणा
+					</Text>
+				</center>
 			</Box>
+			<br />
+			<center>
+				<Box maxW='32rem'>
+					<Heading mb={4}>
+						Modern online and offline payments for Africa
+					</Heading>
+					<Text fontSize='xl'>
+						Paystack helps businesses in Africa get paid by anyone, anywhere in
+						the world
+					</Text>
+					<Button size='lg' colorScheme='green' mt='24px'>
+						Create a free account
+					</Button>
+				</Box>
+			</center>
 		</>
 	);
 };
