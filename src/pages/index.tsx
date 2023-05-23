@@ -4,8 +4,8 @@ import { type NextPage } from 'next';
 import Head from 'next/head';
 import { Box, Heading, Text, Button, Stack } from '@chakra-ui/react';
 // `@chakra-ui/theme` is a part of the base install with `@chakra-ui/react`
-import Navbar from 'Navbar/Navbar';
-import Footer from 'Footer/Footer';
+import Navbar from '~/Navbar/Navbar';
+import Footer from '~/Footer/Footer';
 
 const Home: NextPage = () => {
 	return (
