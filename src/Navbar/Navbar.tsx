@@ -17,18 +17,10 @@ import {
 	Stack,
 	useColorMode,
 	Center,
-	useBreakpointValue,
 	IconButton,
 	HStack,
 } from '@chakra-ui/react';
-import {
-	MoonIcon,
-	SunIcon,
-	HamburgerIcon,
-	CloseIcon,
-	ChevronDownIcon,
-	ChevronRightIcon,
-} from '@chakra-ui/icons';
+import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
 const Links = ['Dashboard', 'Projects', 'Team'];
 
