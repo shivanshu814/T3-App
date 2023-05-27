@@ -54,6 +54,9 @@ export default function Nav() {
 					/>
 					<HStack spacing={8} alignItems={'center'}>
 						{/* <Box>Logo</Box> */}
+						<Button onClick={toggleColorMode}>
+							{colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+						</Button>
 						<HStack
 							as={'nav'}
 							spacing={4}
@@ -67,16 +70,10 @@ export default function Nav() {
 						direction={'row'}
 						flex={{ base: 2, md: 0 }}
 						justify={'flex-end'}
-						spacing={6}></Stack>
+						spacing={15}></Stack>
 
 					<Flex alignItems={'center'}>
 						<Stack direction={'row'} spacing={7}>
-							<Button>Button 🤔🤔🤔</Button>
-
-							<Button onClick={toggleColorMode}>
-								{colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
-							</Button>
-
 							<Menu>
 								<MenuButton
 									as={Button}
@@ -99,15 +96,15 @@ export default function Nav() {
 									</Center>
 									<br />
 									<Center>
-										<p>Username</p>
+										<p>Shivanshu Pathak</p>
 									</Center>
 									<br />
 									<MenuDivider />
-									<MenuItem>Your Servers</MenuItem>
-									<MenuItem>Account Settings</MenuItem>
-									<MenuItem>Logout</MenuItem>
+									<MenuItem>Your Reports</MenuItem>
+									<MenuItem>Profile</MenuItem>
 								</MenuList>
 							</Menu>
+							<Button>Log Out</Button>
 						</Stack>
 					</Flex>
 				</Flex>

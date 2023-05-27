@@ -18,7 +18,7 @@ const Home: NextPage = () => {
 			</Head>
 			<Box
 				w='100%'
-				h='200px'
+				h='220px'
 				bgGradient={[
 					'linear(to-tr, teal.300, yellow.400)',
 					'linear(to-t, blue.200, teal.500)',
