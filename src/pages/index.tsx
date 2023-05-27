@@ -63,7 +63,7 @@ const Home: NextPage = () => {
 							colorScheme='green'
 							mt='24px'
 							as={'a'}
-							href='./SignIn.tsx'>
+							href='../sign-in/[[..index.tsx]]'>
 							Sign In
 						</Button>
 						<Button
@@ -71,7 +71,7 @@ const Home: NextPage = () => {
 							colorScheme='red'
 							mt='24px'
 							as={'a'}
-							href='./SignUp.tsx'>
+							href='../sign-up/[[..index.tsx]]'>
 							Sign Up
 						</Button>
 					</Stack>
