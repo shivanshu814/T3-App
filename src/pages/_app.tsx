@@ -2,11 +2,15 @@
 
 import { ChakraProvider } from '@chakra-ui/react';
 import { type AppType } from 'next/dist/shared/lib/utils';
+import { ClerkProvider } from '@clerk/nextjs';
+import type { AppProps } from 'next/app';
 
-const MyApp: AppType = ({ Component, pageProps }) => {
+const MyApp: AppType = ({ Component, pageProps }: AppProps) => {
 	return (
 		<ChakraProvider>
-			<Component {...pageProps} />;
+			<ClerkProvider {...pageProps}>
+				<Component {...pageProps} />;
+			</ClerkProvider>
 		</ChakraProvider>
 	);
 };
