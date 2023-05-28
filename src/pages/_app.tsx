@@ -7,11 +7,12 @@ import type { AppProps } from 'next/app';
 
 const MyApp: AppType = ({ Component, pageProps }: AppProps) => {
 	return (
-		<ChakraProvider>
-			<ClerkProvider {...pageProps}>
+		<ClerkProvider
+			frontendApi={process.env.exampleNEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
+			<ChakraProvider>
 				<Component {...pageProps} />;
-			</ClerkProvider>
-		</ChakraProvider>
+			</ChakraProvider>
+		</ClerkProvider>
 	);
 };
 
