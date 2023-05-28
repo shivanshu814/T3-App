@@ -2,7 +2,21 @@
 
 import { type NextPage } from 'next';
 import Head from 'next/head';
-import { Box, Heading, Text, Button, Stack } from '@chakra-ui/react';
+import {
+	Box,
+	Heading,
+	Text,
+	Button,
+	Stack,
+	CardBody,
+	ButtonGroup,
+	Card,
+	CardFooter,
+	Divider,
+	SimpleGrid,
+	Image,
+	Center,
+} from '@chakra-ui/react';
 import Navbar from '~/Navbar/Navbar';
 import Footer from '~/Footer/Footer';
 import { useEffect } from 'react';
@@ -29,9 +43,9 @@ const DashboardPage = () => {
 				w='100%'
 				h='220px'
 				bgGradient={[
-					'linear(to-tr, teal.300, yellow.400)',
-					'linear(to-t, blue.200, teal.500)',
-					'linear(to-b, orange.100, purple.300)',
+					'linear(to-tr, green.300, yellow.400)',
+					'linear(to-t, red.200, teal.500)',
+					'linear(to-b, blue.100, purple.300)',
 				]}>
 				<center>
 					<br />
@@ -69,6 +83,174 @@ const DashboardPage = () => {
 						spacing={6}></Stack>
 				</Box>
 			</center>
+			<br />
+			<br />
+			<br />
+			<Box>
+				<Heading>
+					<center>Reviews</center>
+				</Heading>
+			</Box>
+			<br />
+			<br />
+			<Stack
+				flex={{ base: 2, md: 5 }}
+				justify={'flex-center'}
+				direction={'row'}
+				spacing={3}>
+				<Card maxW='lg'>
+					<CardBody>
+						<Center>
+							<Image
+								borderRadius='full'
+								boxSize='250px'
+								src='https://bit.ly/dan-abramov'
+								alt='Dan Abramov'
+							/>
+						</Center>
+						<Stack mt='6' spacing='4'>
+							<Heading size='md'>Living room Sofa</Heading>
+							<Text>
+								This sofa is perfect for modern tropical spaces, baroque
+								inspired spaces, earthy toned spaces and for people who love a
+								chic design with a sprinkle of vintage design.
+							</Text>
+							<Text color='blue.600' fontSize='2xl'>
+								$450
+							</Text>
+						</Stack>
+					</CardBody>
+					<Divider />
+				</Card>
+				<Card maxW='lg'>
+					<CardBody>
+						<Center>
+							<Image
+								borderRadius='full'
+								boxSize='250px'
+								src='https://bit.ly/dan-abramov'
+								alt='Dan Abramov'
+							/>
+						</Center>
+						<Stack mt='6' spacing='4'>
+							<Heading size='md'>Living room Sofa</Heading>
+							<Text>
+								This sofa is perfect for modern tropical spaces, baroque
+								inspired spaces, earthy toned spaces and for people who love a
+								chic design with a sprinkle of vintage design.
+							</Text>
+							<Text color='blue.600' fontSize='2xl'>
+								$450
+							</Text>
+						</Stack>
+					</CardBody>
+					<Divider />
+				</Card>
+				<Card maxW='lg'>
+					<CardBody>
+						<Center>
+							<Image
+								borderRadius='full'
+								boxSize='250px'
+								src='https://bit.ly/dan-abramov'
+								alt='Dan Abramov'
+							/>
+						</Center>
+						<Stack mt='6' spacing='4'>
+							<Heading size='md'>Living room Sofa</Heading>
+							<Text>
+								This sofa is perfect for modern tropical spaces, baroque
+								inspired spaces, earthy toned spaces and for people who love a
+								chic design with a sprinkle of vintage design.
+							</Text>
+							<Text color='blue.600' fontSize='2xl'>
+								$450
+							</Text>
+						</Stack>
+					</CardBody>
+					<Divider />
+				</Card>
+			</Stack>
+			<br />
+			<Stack
+				flex={{ base: 2, md: 5 }}
+				justify={'flex-center'}
+				direction={'row'}
+				spacing={3}>
+				<Card maxW='lg'>
+					<CardBody>
+						<Center>
+							<Image
+								borderRadius='full'
+								boxSize='250px'
+								src='https://bit.ly/dan-abramov'
+								alt='Dan Abramov'
+							/>
+						</Center>
+						<Stack mt='6' spacing='4'>
+							<Heading size='md'>Living room Sofa</Heading>
+							<Text>
+								This sofa is perfect for modern tropical spaces, baroque
+								inspired spaces, earthy toned spaces and for people who love a
+								chic design with a sprinkle of vintage design.
+							</Text>
+							<Text color='blue.600' fontSize='2xl'>
+								$450
+							</Text>
+						</Stack>
+					</CardBody>
+					<Divider />
+				</Card>
+				<Card maxW='lg'>
+					<CardBody>
+						<Center>
+							<Image
+								borderRadius='full'
+								boxSize='250px'
+								src='https://bit.ly/dan-abramov'
+								alt='Dan Abramov'
+							/>
+						</Center>
+						<Stack mt='6' spacing='4'>
+							<Heading size='md'>Living room Sofa</Heading>
+							<Text>
+								This sofa is perfect for modern tropical spaces, baroque
+								inspired spaces, earthy toned spaces and for people who love a
+								chic design with a sprinkle of vintage design.
+							</Text>
+							<Text color='blue.600' fontSize='2xl'>
+								$450
+							</Text>
+						</Stack>
+					</CardBody>
+					<Divider />
+				</Card>
+				<Card maxW='lg'>
+					<CardBody>
+						<Center>
+							<Image
+								borderRadius='full'
+								boxSize='250px'
+								src='https://bit.ly/dan-abramov'
+								alt='Dan Abramov'
+							/>
+						</Center>
+						<Stack mt='6' spacing='4'>
+							<Heading size='md'>Living room Sofa</Heading>
+							<Text>
+								This sofa is perfect for modern tropical spaces, baroque
+								inspired spaces, earthy toned spaces and for people who love a
+								chic design with a sprinkle of vintage design.
+							</Text>
+							<Text color='blue.600' fontSize='2xl'>
+								$450
+							</Text>
+						</Stack>
+					</CardBody>
+					<Divider />
+				</Card>
+			</Stack>
+
 			<br />
 			<Footer />
 		</>
