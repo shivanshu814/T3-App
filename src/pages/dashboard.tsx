@@ -104,19 +104,20 @@ const DashboardPage = () => {
 							<Image
 								borderRadius='full'
 								boxSize='250px'
-								src='https://bit.ly/dan-abramov'
+								src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSnhzKAqQOng4eHKyMV3Bj9lLZWowaW1nnC5cHjsUndQ&usqp=CAU&ec=48665699'
 								alt='Dan Abramov'
 							/>
 						</Center>
 						<Stack mt='6' spacing='4'>
-							<Heading size='md'>Living room Sofa</Heading>
+							<Heading size='md'>गीता देवी</Heading>
 							<Text>
-								This sofa is perfect for modern tropical spaces, baroque
-								inspired spaces, earthy toned spaces and for people who love a
-								chic design with a sprinkle of vintage design.
+								हम किसान भाइयों ने अपनी खेती में पानी की समस्या को हल करने के
+								लिए नया तरीका अपनाया है। हम बोर खदान करने से पहले वैज्ञानिकों से
+								जांच करवाने का निर्णय लिया है। इससे हमें अधिक पैसे खर्च करने से
+								बचा जा सकेगा और हमें सही तरीके से पानी मिलेगा।
 							</Text>
 							<Text color='blue.600' fontSize='2xl'>
-								$450
+								गोविंदपुर
 							</Text>
 						</Stack>
 					</CardBody>
@@ -128,19 +129,21 @@ const DashboardPage = () => {
 							<Image
 								borderRadius='full'
 								boxSize='250px'
-								src='https://bit.ly/dan-abramov'
+								src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQtYPawYDRCZsK8fdF6wE73Sg-v8BIbAt72raH5UmNPA&usqp=CAU&ec=48665699'
 								alt='Dan Abramov'
 							/>
 						</Center>
 						<Stack mt='6' spacing='4'>
-							<Heading size='md'>Living room Sofa</Heading>
+							<Heading size='md'>रामेश्वर सिंह</Heading>
 							<Text>
-								This sofa is perfect for modern tropical spaces, baroque
-								inspired spaces, earthy toned spaces and for people who love a
-								chic design with a sprinkle of vintage design.
+								हमें पहले कुछ समय से देशभर में बाढ़, सूखा और पानी की कमी से
+								निपटना पड़ रहा था। हमारे खेतों में पौधों को पर्याप्त पानी उपलब्ध
+								नहीं था, जिसके कारण हमारी उपज कम हो रही थी और हमारी आर्थिक
+								स्थिति में भी गिरावट आ रही थी। इसलिए, हमने इस मुद्दे का समाधान
+								ढूंढने के लिए विशेषज्ञ वैज्ञानिकों से सलाह ली है।
 							</Text>
 							<Text color='blue.600' fontSize='2xl'>
-								$450
+								जगदीशपुर
 							</Text>
 						</Stack>
 					</CardBody>
@@ -152,19 +155,21 @@ const DashboardPage = () => {
 							<Image
 								borderRadius='full'
 								boxSize='250px'
-								src='https://bit.ly/dan-abramov'
+								src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ7bQ63asqJ4_Fyd55iBQ7wyBHUeOyEvZ87ek3b5rSMg&usqp=CAU&ec=48665699'
 								alt='Dan Abramov'
 							/>
 						</Center>
 						<Stack mt='6' spacing='4'>
-							<Heading size='md'>Living room Sofa</Heading>
+							<Heading size='md'>आशा यादव</Heading>
 							<Text>
-								This sofa is perfect for modern tropical spaces, baroque
-								inspired spaces, earthy toned spaces and for people who love a
-								chic design with a sprinkle of vintage design.
+								वैज्ञानिकों के सहयोग से हमने बोर कराने से पहले गहराई की जांच
+								करवाई और निकासी पानी के स्तर की जांच की। इस जांच में हमें सटीक
+								जानकारी मिली कि कितनी गहराई तक खदान करना होगा और कौन सी पानी सतह
+								पर मौजूद है। इसके बाद हमने उचित तरीके से खदान करवाने का निर्णय
+								लिया और अब हमें आराम से पानी मिल रहा है।
 							</Text>
 							<Text color='blue.600' fontSize='2xl'>
-								$450
+								रामपुर
 							</Text>
 						</Stack>
 					</CardBody>
@@ -180,22 +185,29 @@ const DashboardPage = () => {
 				<Card maxW='lg'>
 					<CardBody>
 						<Center>
-							<Image
-								borderRadius='full'
-								boxSize='250px'
-								src='https://bit.ly/dan-abramov'
-								alt='Dan Abramov'
-							/>
+							<Center>
+								<Image
+									borderRadius='full'
+									boxSize='250px'
+									src='https://t3.ftcdn.net/jpg/03/26/96/08/360_F_326960863_H6rldtPxBudJAeYsBvhWEQK3l0OwWOLe.jpg'
+									alt='Dan Abramov'
+								/>
+							</Center>
 						</Center>
 						<Stack mt='6' spacing='4'>
-							<Heading size='md'>Living room Sofa</Heading>
+							<Heading size='md'>संजय कुमार </Heading>
 							<Text>
-								This sofa is perfect for modern tropical spaces, baroque
-								inspired spaces, earthy toned spaces and for people who love a
-								chic design with a sprinkle of vintage design.
+								हमारे जीवन की रोटी सबसे महत्वपूर्ण है और खेती में पानी की
+								उपलब्धता एक महत्वपूर्ण मुद्दा बन गई थी। हमने अपने क्षेत्र में
+								वैज्ञानिकों की सलाह ली और उनकी मार्गदर्शन में बोर खदान कराया।
+								इससे पहले, हमें पानी के लिए उचित मार्गदर्शन की आवश्यकता थी जिसे
+								वैज्ञानिकों ने सुनिश्चित किया। अब हमें पानी की समस्या से निपटने
+								के लिए कठिनाइयाँ नहीं होती हैं और हमारी खेती उत्पादकता में
+								वृद्धि हुई है। वैज्ञानिकों के साथ काम करने से हमारे लिए एक नया
+								दिन संध्या आयी है!
 							</Text>
 							<Text color='blue.600' fontSize='2xl'>
-								$450
+								विजयनगर
 							</Text>
 						</Stack>
 					</CardBody>
@@ -207,19 +219,22 @@ const DashboardPage = () => {
 							<Image
 								borderRadius='full'
 								boxSize='250px'
-								src='https://bit.ly/dan-abramov'
+								src='https://t3.ftcdn.net/jpg/04/32/15/18/360_F_432151892_oQ3YQDo2LYZPILlEMnlo55PjjgiUwnQb.jpg'
 								alt='Dan Abramov'
 							/>
 						</Center>
 						<Stack mt='6' spacing='4'>
-							<Heading size='md'>Living room Sofa</Heading>
+							<Heading size='md'>रामेश्वर सिंह</Heading>
 							<Text>
-								This sofa is perfect for modern tropical spaces, baroque
-								inspired spaces, earthy toned spaces and for people who love a
-								chic design with a sprinkle of vintage design.
+								अच्छी खेती के लिए सही मात्रा में पानी महत्वपूर्ण है और हमारे पास
+								पहले से ही कमी थी। बोर करने से पहले हमने वैज्ञानिकों की सलाह ली
+								और उनके निर्देशों के अनुसार कार्रवाई की। वैज्ञानिकों ने हमें सही
+								तरीके से गहराई और जल स्तर की जांच करने की सलाह दी, जिससे हमने
+								पानी की सही मात्रा निकालने में सफलता प्राप्त की। यह हमारे लिए एक
+								महत्वपूर्ण उपलब है।
 							</Text>
 							<Text color='blue.600' fontSize='2xl'>
-								$450
+								नवलगढ़
 							</Text>
 						</Stack>
 					</CardBody>
@@ -231,25 +246,29 @@ const DashboardPage = () => {
 							<Image
 								borderRadius='full'
 								boxSize='250px'
-								src='https://bit.ly/dan-abramov'
+								src='data:image/jpeg;base64,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'
 								alt='Dan Abramov'
 							/>
 						</Center>
 						<Stack mt='6' spacing='4'>
-							<Heading size='md'>Living room Sofa</Heading>
+							<Heading size='md'>मुकेश पटेल</Heading>
 							<Text>
-								This sofa is perfect for modern tropical spaces, baroque
-								inspired spaces, earthy toned spaces and for people who love a
-								chic design with a sprinkle of vintage design.
+								इस नए तरीके ने हमारे खेती को बहुत मदद की है। हमें अब पानी की कमी
+								से निपटने की चिंता नहीं होती है और हमारी उपज भी बढ़ गई है।
+								वैज्ञानिकों के साथ मिलकर किसानों को नई तकनीकों और विज्ञान की
+								जानकारी मिली है, जिससे हमारी खेती का प्रबंधन और उत्पादन और भी
+								बेहतर हो गया है। हम आशा करते हैं कि ऐसे ही वैज्ञानिक सहयोग और
+								तकनीकी नवाचार हमें और भी सफलता दिलाएंगे।
 							</Text>
 							<Text color='blue.600' fontSize='2xl'>
-								$450
+								भूपालपुर
 							</Text>
 						</Stack>
 					</CardBody>
 					<Divider />
 				</Card>
 			</Stack>
+			<br />
 
 			<br />
 			<Footer />
