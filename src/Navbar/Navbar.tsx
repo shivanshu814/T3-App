@@ -70,7 +70,7 @@ export default function Nav() {
 						direction={'row'}
 						flex={{ base: 2, md: 0 }}
 						justify={'flex-end'}
-						spacing={15}></Stack>
+						spacing={6}></Stack>
 
 					<Flex alignItems={'center'}>
 						<Stack direction={'row'} spacing={7}>
