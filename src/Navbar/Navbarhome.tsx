@@ -79,41 +79,7 @@ export default function Nav() {
 						spacing={6}></Stack>
 
 					<Flex alignItems={'center'}>
-						<Stack direction={'row'} spacing={7}>
-							<Menu>
-								<MenuButton
-									as={Button}
-									rounded={'full'}
-									variant={'link'}
-									cursor={'pointer'}
-									minW={0}>
-									<Avatar
-										size={'sm'}
-										src={'https://avatars.dicebear.com/api/male/username.svg'}
-									/>
-								</MenuButton>
-								<MenuList alignItems={'center'}>
-									<br />
-									<Center>
-										<Avatar
-											size={'3xl'}
-											src={'https://avatars.dicebear.com/api/male/username.svg'}
-										/>
-									</Center>
-									<br />
-									<Center>
-										<p>Shivanshu Pathak</p>
-									</Center>
-									<br />
-									<MenuDivider />
-									<MenuItem>Your Reports</MenuItem>
-									<MenuItem>Profile</MenuItem>
-								</MenuList>
-							</Menu>
-							<Link href='/'>
-								<Button rightIcon={<ArrowForwardIcon />}>Log Out</Button>
-							</Link>
-						</Stack>
+						<Stack direction={'row'} spacing={7}></Stack>
 					</Flex>
 				</Flex>
 			</Box>
