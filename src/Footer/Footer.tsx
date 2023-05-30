@@ -16,9 +16,6 @@ import {
 import { ReactNode } from 'react';
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { BiMailSend } from 'react-icons/bi';
-// axios is used to make the http request to the api endpoints
-import React, { useState } from 'react';
-import Axios, { AxiosResponse, AxiosError } from 'axios';
 
 const Logo = (props: any) => {
 	return (
@@ -84,24 +81,6 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
 };
 
 export default function LargeWithNewsletter() {
-	// using here usestate to save the value and send it to database
-	const [email, setEmail] = useState('');
-
-	const handleSubmit = async (e: { preventDefault: () => void }) => {
-		e.preventDefault();
-
-		if (!email) {
-			return;
-		}
-
-		Axios.post('/api/subscribe', { email })
-			.then((response: AxiosResponse) => {
-				setEmail(''); // Clear the email input field after successful submission
-			})
-			.catch((error: AxiosError) => {
-				console.error('Error subscribing:', error);
-			});
-	};
 	return (
 		<Box
 			bg={useColorModeValue('gray.50', 'gray.900')}
@@ -147,33 +126,28 @@ export default function LargeWithNewsletter() {
 					</Stack>
 					<Stack align={'flex-start'}>
 						<ListHeader>Stay up to date</ListHeader>
-						<form onSubmit={handleSubmit}>
-							<Stack direction={'row'}>
-								<Input
-									// defining the type and value taking and onchange what to do
-									type='email'
-									value={email}
-									onChange={(e) => setEmail(e.target.value)}
-									placeholder={'Your email address'}
-									bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
-									border={0}
-									_focus={{
-										bg: 'whiteAlpha.300',
-									}}
-								/>
-								<IconButton
-									// here is a type which is used for submitting the data
-									type='submit'
-									bg={useColorModeValue('green.400', 'green.800')}
-									color={useColorModeValue('white', 'gray.800')}
-									_hover={{
-										bg: 'green.600',
-									}}
-									aria-label='Subscribe'
-									icon={<BiMailSend />}
-								/>
-							</Stack>
-						</form>
+
+						<Stack direction={'row'}>
+							<Input
+								// defining the type and value taking and onchange what to do
+
+								placeholder={'Your email address'}
+								bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
+								border={0}
+								_focus={{
+									bg: 'whiteAlpha.300',
+								}}
+							/>
+							<IconButton
+								bg={useColorModeValue('green.400', 'green.800')}
+								color={useColorModeValue('white', 'gray.800')}
+								_hover={{
+									bg: 'green.600',
+								}}
+								aria-label='Subscribe'
+								icon={<BiMailSend />}
+							/>
+						</Stack>
 					</Stack>
 				</SimpleGrid>
 			</Container>
