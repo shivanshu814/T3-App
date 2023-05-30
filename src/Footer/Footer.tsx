@@ -13,7 +13,7 @@ import {
 	IconButton,
 	useColorModeValue,
 } from '@chakra-ui/react';
-import { ReactNode } from 'react';
+import { ReactNode, useState } from 'react';
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { BiMailSend } from 'react-icons/bi';
 
@@ -81,6 +81,25 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
 };
 
 export default function LargeWithNewsletter() {
+	const [email, setEmail] = useState('');
+
+	const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+		setEmail(event.target.value);
+	};
+	// this helps in call the api which exists in /src/pages/api/email.ts
+	const makiApiCall = async () => {
+		try {
+			await fetch('/api/email', {
+				method: 'POST',
+				// have to manage like that so data take from user and show in backend which is terminal
+				body: JSON.stringify({ email }),
+			});
+			setEmail('');
+		} catch (error) {
+			console.error('Error sending email:', error);
+		}
+	};
+
 	return (
 		<Box
 			bg={useColorModeValue('gray.50', 'gray.900')}
@@ -137,8 +156,12 @@ export default function LargeWithNewsletter() {
 								_focus={{
 									bg: 'whiteAlpha.300',
 								}}
+								value={email} // Bind the input value to the email state
+								onChange={handleInputChange} // Handle input change and update the email state
 							/>
 							<IconButton
+								// this line helps to call api just on click
+								onClick={makiApiCall}
 								bg={useColorModeValue('green.400', 'green.800')}
 								color={useColorModeValue('white', 'gray.800')}
 								_hover={{
