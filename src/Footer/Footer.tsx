@@ -149,7 +149,7 @@ export default function LargeWithNewsletter() {
 						<Stack direction={'row'}>
 							<Input
 								// defining the type and value taking and onchange what to do
-
+								name='email'
 								placeholder={'Your email address'}
 								bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
 								border={0}

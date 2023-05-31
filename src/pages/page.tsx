@@ -2,7 +2,7 @@
 'use client';
 export default function Home() {
 	const makiApiCall = async () => {
-		await fetch('/api/email', {
+		await fetch('/api/emailsend', {
 			method: 'POST',
 			body: JSON.stringify({ hello: 'world' }),
 		});
