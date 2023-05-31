@@ -13,6 +13,7 @@ import {
 	IconButton,
 	useColorModeValue,
 	Link as ChakraLink,
+	Center,
 } from '@chakra-ui/react';
 import { ReactNode, useState } from 'react';
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
@@ -115,6 +116,18 @@ export default function LargeWithNewsletter() {
 		<Box
 			bg={useColorModeValue('gray.50', 'gray.900')}
 			color={useColorModeValue('gray.700', 'gray.200')}>
+			<Box mt={8} overflow='hidden' borderRadius='lg'>
+				<iframe
+					width='100%'
+					height='400'
+					frameBorder='0'
+					scrolling='no'
+					marginHeight={0}
+					marginWidth={0}
+					src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3632.703849040398!2d79.97795631536494!3d24.5870419841744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4f4c9f3341f2c7%3A0x97b6731da8531d99!2sGali%20Number%203%2C%20Siddhart%20Nagar%2C%20Satna%2C%20Madhya%20Pradesh%20485001%2C%20India!5e0!3m2!1sen!2sus!4v1622563270834!5m2!1sen!2sus'
+					title='Google Map'
+					allowFullScreen></iframe>
+			</Box>
 			<Container as={Stack} maxW={'6xl'} py={10}>
 				<SimpleGrid
 					templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 1fr 2fr' }}
@@ -151,7 +164,7 @@ export default function LargeWithNewsletter() {
 						<Link href={'#'}>Help Center</Link>
 						<Link href={'#'}>Terms of Service</Link>
 						<Link href={'#'}>Legal</Link>
-						<Link href={'#'}>Privacy Policy</Link>
+						<Link href={'/privacy'}>Privacy Policy</Link>
 						<Link href={'#'}>Satus</Link>
 					</Stack>
 					<Stack align={'flex-start'}>
@@ -185,6 +198,7 @@ export default function LargeWithNewsletter() {
 					</Stack>
 				</SimpleGrid>
 			</Container>
+
 			<Box
 				as='footer'
 				p={4}
@@ -196,11 +210,7 @@ export default function LargeWithNewsletter() {
 					© {new Date().getFullYear()} Groundwater Monitoring. All rights
 					reserved.
 				</Text>
-				<ChakraLink
-					color='blue.500'
-					href='https://example.com'
-					isExternal
-					mt={2}>
+				<ChakraLink color='blue.500' href='/privacy' isExternal mt={2}>
 					Privacy Policy
 				</ChakraLink>
 			</Box>

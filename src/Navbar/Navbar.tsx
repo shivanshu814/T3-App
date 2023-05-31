@@ -4,33 +4,23 @@ import { ReactNode } from 'react';
 import {
 	Box,
 	Flex,
-	Avatar,
 	Link,
 	Button,
-	Menu,
-	MenuButton,
-	MenuList,
-	MenuItem,
-	MenuDivider,
-	useDisclosure,
 	useColorModeValue,
 	Stack,
 	useColorMode,
-	Center,
-	IconButton,
 	HStack,
 } from '@chakra-ui/react';
-import {
-	MoonIcon,
-	SunIcon,
-	HamburgerIcon,
-	CloseIcon,
-	ArrowForwardIcon,
-} from '@chakra-ui/icons';
+import { MoonIcon, SunIcon } from '@chakra-ui/icons';
+import { UserButton } from '@clerk/nextjs';
 
-const Links = ['Dashboard', 'Projects', 'Team'];
+const Links = [
+	{ label: 'Projects', url: '/projects' },
+	{ label: 'Reports', url: '/reports' },
+	{ label: 'Application Form', url: '/formpage' },
+];
 
-const NavLink = ({ children }: { children: ReactNode }) => (
+const NavLink = ({ children, url }: { children: ReactNode; url: string }) => (
 	<Link
 		px={2}
 		py={1}
@@ -39,25 +29,17 @@ const NavLink = ({ children }: { children: ReactNode }) => (
 			textDecoration: 'none',
 			bg: useColorModeValue('gray.200', 'gray.700'),
 		}}
-		href={'#'}>
+		href={url}>
 		{children}
 	</Link>
 );
 
 export default function Nav() {
 	const { colorMode, toggleColorMode } = useColorMode();
-	const { isOpen, onOpen, onClose } = useDisclosure();
 	return (
 		<>
 			<Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
 				<Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-					<IconButton
-						size={'md'}
-						icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-						aria-label={'Open Menu'}
-						display={{ md: 'none' }}
-						onClick={isOpen ? onClose : onOpen}
-					/>
 					<HStack spacing={8} alignItems={'center'}>
 						{/* <Box>Logo</Box> */}
 						<Button onClick={toggleColorMode}>
@@ -68,7 +50,9 @@ export default function Nav() {
 							spacing={4}
 							display={{ base: 'none', md: 'flex' }}>
 							{Links.map((link) => (
-								<NavLink key={link}>{link}</NavLink>
+								<NavLink key={link.label} url={link.url}>
+									{link.label}
+								</NavLink>
 							))}
 						</HStack>
 					</HStack>
@@ -77,44 +61,7 @@ export default function Nav() {
 						flex={{ base: 2, md: 0 }}
 						justify={'flex-end'}
 						spacing={6}></Stack>
-
-					<Flex alignItems={'center'}>
-						<Stack direction={'row'} spacing={7}>
-							<Menu>
-								<MenuButton
-									as={Button}
-									rounded={'full'}
-									variant={'link'}
-									cursor={'pointer'}
-									minW={0}>
-									<Avatar
-										size={'sm'}
-										src={'https://avatars.dicebear.com/api/male/username.svg'}
-									/>
-								</MenuButton>
-								<MenuList alignItems={'center'}>
-									<br />
-									<Center>
-										<Avatar
-											size={'3xl'}
-											src={'https://avatars.dicebear.com/api/male/username.svg'}
-										/>
-									</Center>
-									<br />
-									<Center>
-										<p>Shivanshu Pathak</p>
-									</Center>
-									<br />
-									<MenuDivider />
-									<MenuItem>Your Reports</MenuItem>
-									<MenuItem>Profile</MenuItem>
-								</MenuList>
-							</Menu>
-							<Link href='/'>
-								<Button rightIcon={<ArrowForwardIcon />}>Log Out</Button>
-							</Link>
-						</Stack>
-					</Flex>
+					<UserButton />
 				</Flex>
 			</Box>
 		</>
