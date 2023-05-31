@@ -4,33 +4,24 @@ import { ReactNode } from 'react';
 import {
 	Box,
 	Flex,
-	Avatar,
 	Link,
 	Button,
-	Menu,
-	MenuButton,
-	MenuList,
-	MenuItem,
-	MenuDivider,
 	useDisclosure,
 	useColorModeValue,
 	Stack,
 	useColorMode,
-	Center,
 	IconButton,
 	HStack,
 } from '@chakra-ui/react';
-import {
-	MoonIcon,
-	SunIcon,
-	HamburgerIcon,
-	CloseIcon,
-	ArrowForwardIcon,
-} from '@chakra-ui/icons';
+import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
-const Links = ['Dashboard', 'Projects', 'Team'];
+const Links = [
+	{ label: 'Dashboard', url: '/dashboard' },
+	{ label: 'Projects', url: '/projects' },
+	{ label: 'Application Form', url: '/formpage' },
+];
 
-const NavLink = ({ children }: { children: ReactNode }) => (
+const NavLink = ({ children, url }: { children: ReactNode; url: string }) => (
 	<Link
 		px={2}
 		py={1}
@@ -39,7 +30,7 @@ const NavLink = ({ children }: { children: ReactNode }) => (
 			textDecoration: 'none',
 			bg: useColorModeValue('gray.200', 'gray.700'),
 		}}
-		href={'#'}>
+		href={url}>
 		{children}
 	</Link>
 );
@@ -68,7 +59,9 @@ export default function Nav() {
 							spacing={4}
 							display={{ base: 'none', md: 'flex' }}>
 							{Links.map((link) => (
-								<NavLink key={link}>{link}</NavLink>
+								<NavLink key={link.label} url={link.url}>
+									{link.label}
+								</NavLink>
 							))}
 						</HStack>
 					</HStack>
