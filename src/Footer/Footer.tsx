@@ -93,6 +93,9 @@ export default function LargeWithNewsletter() {
 				method: 'POST',
 				// have to manage like that so data take from user and show in backend which is terminal
 				body: JSON.stringify({ email }),
+				headers: {
+					'Content-Type': 'application/json',
+				},
 			});
 			setEmail('');
 		} catch (error) {
