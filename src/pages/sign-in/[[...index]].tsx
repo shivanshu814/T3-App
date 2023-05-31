@@ -19,6 +19,7 @@ import { Center } from '@chakra-ui/react';
 
 const LoginPage = () => {
 	const { isSignedIn } = useUser();
+
 	const router = useRouter();
 
 	useEffect(() => {
