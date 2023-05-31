@@ -10,7 +10,6 @@ If you are not familiar with the different technologies used in this project, pl
 
 - [Next.js](https://nextjs.org)
 - [Clerk](https://clerk.com)
-- [Prisma](https://prisma.io)
 - [ChakraUI](https://chakra-ui.com)
 - [tRPC](https://trpc.io)
 
