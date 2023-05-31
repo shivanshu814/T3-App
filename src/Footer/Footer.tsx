@@ -12,6 +12,7 @@ import {
 	Input,
 	IconButton,
 	useColorModeValue,
+	Link as ChakraLink,
 } from '@chakra-ui/react';
 import { ReactNode, useState } from 'react';
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
@@ -177,6 +178,25 @@ export default function LargeWithNewsletter() {
 					</Stack>
 				</SimpleGrid>
 			</Container>
+			<Box
+				as='footer'
+				p={4}
+				mt={8}
+				borderTop='1px solid'
+				borderColor='gray.200'
+				textAlign='center'>
+				<Text fontSize='sm'>
+					© {new Date().getFullYear()} Groundwater Monitoring. All rights
+					reserved.
+				</Text>
+				<ChakraLink
+					color='blue.500'
+					href='https://example.com'
+					isExternal
+					mt={2}>
+					Privacy Policy
+				</ChakraLink>
+			</Box>
 		</Box>
 	);
 }

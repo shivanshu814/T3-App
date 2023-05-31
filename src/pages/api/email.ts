@@ -21,3 +21,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 	}
 };
 export default handler;
+
+// path to checked for further api is firstly
+
+// footer.tsx -> email.ts -> mongodb.ts -> subscribe.ts -> email.ts finish

@@ -2,12 +2,33 @@
 
 import { type NextPage } from 'next';
 import Head from 'next/head';
-import { Box, Heading, Text, Button, Stack } from '@chakra-ui/react';
+import {
+	Box,
+	Heading,
+	Text,
+	Button,
+	Stack,
+	Flex,
+	Link,
+	SlideFade,
+	VStack,
+} from '@chakra-ui/react';
 // `@chakra-ui/theme` is a part of the base install with `@chakra-ui/react`
 import Footer from '~/Footer/Footer';
 import Navbarhome from '~/Navbar/Navbarhome';
+import { useEffect, useState } from 'react';
 
 const Home: NextPage = () => {
+	const [showAnimation, setShowAnimation] = useState(false);
+
+	useEffect(() => {
+		// Delay showing the animation for a smoother loading experience
+		const timeout = setTimeout(() => {
+			setShowAnimation(true);
+		}, 1000);
+
+		return () => clearTimeout(timeout);
+	}, []);
 	return (
 		<>
 			<Navbarhome />
@@ -26,20 +47,24 @@ const Home: NextPage = () => {
 				]}>
 				<center>
 					<br />
-					<Text
-						bgGradient='linear(to-l, #7928CA, #FF0080)'
-						bgClip='text'
-						fontSize='4xl'
-						fontWeight='extrabold'>
-						मध्य प्रदेश शासन
-					</Text>
-					<Text
-						bgGradient='linear(to-l, #7928CA, #FF0080)'
-						bgClip='text'
-						fontSize='5xl'
-						fontWeight='extrabold'>
-						भू-जल सर्वेक्षण केन्द्र
-					</Text>
+					<SlideFade in={showAnimation} offsetY='-20px'>
+						<VStack spacing={4}>
+							<Text
+								bgGradient='linear(to-l, #7928CA, #FF0080)'
+								bgClip='text'
+								fontSize='4xl'
+								fontWeight='extrabold'>
+								मध्य प्रदेश शासन
+							</Text>
+							<Text
+								bgGradient='linear(to-l, #7928CA, #FF0080)'
+								bgClip='text'
+								fontSize='5xl'
+								fontWeight='extrabold'>
+								भू-जल सर्वेक्षण केन्द्र
+							</Text>
+						</VStack>
+					</SlideFade>
 				</center>
 			</Box>
 			<br />
