@@ -269,7 +269,6 @@ const DashboardPage = () => {
 				</Card>
 			</Stack>
 			<br />
-
 			<br />
 			<Footer />
 		</>
