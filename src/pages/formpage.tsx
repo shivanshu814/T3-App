@@ -1,7 +1,5 @@
 /** @format */
 
-/** @format */
-
 import { useEffect, useState } from 'react';
 import {
 	Flex,
@@ -11,7 +9,6 @@ import {
 	FormLabel,
 	Input,
 	Button,
-	Select,
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -64,6 +61,10 @@ const FormPage = () => {
 		return () => clearInterval(interval);
 	}, []);
 
+	const handleLanguageSwitch = () => {
+		setLanguage(language === 'en' ? 'hi' : 'en');
+	};
+
 	const [name, setName] = useState('');
 	const [address, setAddress] = useState('');
 	const [pincode, setPincode] = useState('');
@@ -74,16 +75,56 @@ const FormPage = () => {
 	const [village, setVillage] = useState('');
 	const [language, setLanguage] = useState('en');
 
-	const handleLanguageSwitch = () => {
-		setLanguage(language === 'en' ? 'hi' : 'en');
+	const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+		setName(event.target.value);
+		setAddress(event.target.value);
+		setPincode(event.target.value);
+		setState(event.target.value);
+		setDistrict(event.target.value);
+		setPhone(event.target.value);
+		setFatherName(event.target.value);
+		setVillage(event.target.value);
+		setLanguage(event.target.value);
 	};
 
-	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-		e.preventDefault();
-		// Handle form submission logic here
-		console.log('Form submitted!');
+	// this helps in call the api which exists in /src/pages/api/email.ts
+	const DataPost = async () => {
+		try {
+			await fetch('/api/form', {
+				method: 'POST',
+				// have to manage like that so data take from user and show in backend which is terminal
+				body: JSON.stringify({
+					name,
+					address,
+					pincode,
+					state,
+					district,
+					phone,
+					fatherName,
+					village,
+					language,
+				}),
+				headers: {
+					'Content-Type': 'application/json',
+				},
+			});
+			setName('');
+			setAddress('');
+			setPincode('');
+			setState('');
+			setDistrict('');
+			setPhone('');
+			setFatherName('');
+			setVillage('');
+			setLanguage('');
+		} catch (error) {
+			console.error('Error sending Data:', error);
+		}
 	};
-
+	const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+		event.preventDefault();
+		DataPost();
+	};
 	return (
 		<>
 			<Flex align='center' justify='center' minHeight='100vh'>
@@ -107,7 +148,7 @@ const FormPage = () => {
 							{language === 'en' ? 'Switch to Hindi' : 'Switch to English'}
 						</Button>
 					</Flex>
-					<form onSubmit={handleSubmit}>
+					<form onSubmit={handleFormSubmit}>
 						<FormControl id='name' mb={4}>
 							<FormLabel>{language === 'en' ? 'Name' : 'नाम'}</FormLabel>
 							<Input
@@ -181,6 +222,7 @@ const FormPage = () => {
 							transition={{ duration: 0.3 }}
 							key={Math.random()}>
 							<Button
+								onClick={DataPost}
 								bgGradient={`linear(to-r, ${bgColor}, ${randomColor()})`}
 								color='white'
 								fontWeight='bold'
