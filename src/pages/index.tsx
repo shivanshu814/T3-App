@@ -8,8 +8,6 @@ import {
 	Text,
 	Button,
 	Stack,
-	Flex,
-	Link,
 	SlideFade,
 	VStack,
 } from '@chakra-ui/react';
