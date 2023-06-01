@@ -119,7 +119,7 @@ const FormPage = () => {
 	};
 	const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
-		DataPost();
+		// DataPost();
 	};
 	const { colorMode, toggleColorMode } = useColorMode();
 	return (
