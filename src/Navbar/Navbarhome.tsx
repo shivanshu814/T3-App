@@ -14,6 +14,7 @@ import {
 	HStack,
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import { Logo } from '~/pages/logo';
 
 const Links = [
 	{ label: 'Dashboard', url: '/dashboard' },
@@ -51,6 +52,7 @@ export default function Nav() {
 					/>
 					<HStack spacing={8} alignItems={'center'}>
 						{/* <Box>Logo</Box> */}
+						<Logo />
 						<Button onClick={toggleColorMode}>
 							{colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
 						</Button>

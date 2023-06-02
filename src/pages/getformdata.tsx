@@ -1,5 +1,4 @@
 /** @format */
-// ...
 
 import { Box, IconButton, Input, Stack, Text } from '@chakra-ui/react';
 import { SetStateAction, useEffect, useState } from 'react';
