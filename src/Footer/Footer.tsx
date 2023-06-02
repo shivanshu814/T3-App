@@ -110,6 +110,14 @@ export default function LargeWithNewsletter() {
 		} catch (error) {
 			console.error('Error sending email:', error);
 		}
+		await fetch('/api/cronjob', {
+			method: 'POST',
+			body: JSON.stringify({ email: email }),
+			headers: {
+				'Content-Type': 'application/json',
+			},
+		});
+		console.log('Submitted email to newsletter API endpoint');
 	};
 
 	return (

@@ -13,6 +13,7 @@ import {
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { UserButton } from '@clerk/nextjs';
+import { Logo } from '~/pages/logo';
 
 const Links = [
 	{ label: 'Projects', url: '/projects' },
@@ -42,6 +43,7 @@ export default function Nav() {
 				<Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
 					<HStack spacing={8} alignItems={'center'}>
 						{/* <Box>Logo</Box> */}
+						<Logo />
 						<Button onClick={toggleColorMode}>
 							{colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
 						</Button>
