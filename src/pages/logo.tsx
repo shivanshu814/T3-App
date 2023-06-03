@@ -3,7 +3,7 @@
 export const Logo = (props: any) => (
 	<svg
 		width='150px'
-		height='60px'
+		height='50px'
 		viewBox='0 0 1024 1024'
 		version='1.1'
 		xmlns='http://www.w3.org/2000/svg'>
